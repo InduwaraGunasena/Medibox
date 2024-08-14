@@ -12,12 +12,12 @@ Medibox is a device used to remind users to take their medicine on time using an
 
 Now you already know this is a device that reminds paticients to take their medicies on time. To fullfill this I identified several requirements as listed below.
 
-- ###functional requirements
+- ## functional requirements
 
   - **Device must remind the relevent doses on time:** The device will remind doses by using its buzzer and LED.
   - **Device should store the medicines under secure container:** The shaded sliding window is used to prevent the excessive light from entering the medibox. It has a DHT sensor to measure the temperature and humidity of the environment.
 
-- ###non-functional requirements
+- ## non-functional requirements
   - **The time should be accurately represent the current time:** To do this, the device update the time by usin NTP server. Also the user can also setup their timezone.
   - **The device should last long time:** The device uses several power saving mechanisms to save the power.
   - **User friendly device:** It has a simple design and a user interface in both physical and web based interface to interact with the device. Users can change and visualize everything using both interfaces.
@@ -62,13 +62,16 @@ In my code directory, There are several folders in it.
 To control the shaded sliding window I use this equation to calculate the servo motor angle.
 
 $$
-\theta = \min{ \theta<sub>offset</sub> × D + (180 − \theta<sub>offset</sub>) × I × \gamma, 180}
+\theta = \min\left( \theta_{\text{offset}} \times D + (180 − \theta_{\text{offset}}) \times I \times \gamma , 180 \right)
+$$
+
+
 where,
-∗ \theta is the motor angle
-∗ \theta<sub>offset</sub> is the minimum angle (default value of 30 degrees)
-∗ I is the max intensity of light, ranging from 0 to 1
-∗ \gamma is the controlling factor (default value of 0.75)
-∗ D = 0.5 if right LDR gives max intensity, D = 1.5 if left LDR gives max intensity
+- $\theta$ is the motor angle
+- $\theta$<sub>offset</sub> is the minimum angle (default value of 30 degrees)
+- $I$ is the max intensity of light, ranging from 0 to 1
+- $\gamma$ is the controlling factor (default value of 0.75)
+- D = 0.5 if right LDR gives max intensity, D = 1.5 if left LDR gives max intensity
 
 ### NodeRED Dashboard
 For web based dashboard I used NodeRED dashboard. It is a very simple platform to build an attractive dashboards. All the necessory files to build NodeRED dashboard are in the **Node-RED dashboard** folder. You can import the **flows.json** file into your NodeRED application and change it as you want.
@@ -78,4 +81,3 @@ For web based dashboard I used NodeRED dashboard. It is a very simple platform t
 I really welcome everyone who are like to develop, improve and correct bugs. You can freely fork this project and add anything you want. But **please secure the credits of author**.
 
 Thank you :grin:
-$$
