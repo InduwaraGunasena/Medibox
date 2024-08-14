@@ -1,9 +1,5 @@
 # Medibox
 
-This is a solo project in my forth semester has done for _EN2853: Embedded Systems And Applications_ course module in University of Moratuwa.
-
-## Introduction of my project
-
 When you have any disease you need medicine to recover. Taking medicines on time is essential for recover fast. Today almost all the people are very busy. So they can mistake their doses. So this medibox will help you to do this on time.
 
 Medibox is a device used to remind users to take their medicine on time using an ESP32. This device reminds you every doses with relevent medicine on that dose. Therefore, you will never miss any medicine or dose again.
@@ -34,6 +30,9 @@ Now you already know this is a device that reminds paticients to take their medi
 8. SG90 servo motor
 
 ## Wiring diagram
+You can use **diagram.json** file to build the circuit in the Wokwi platform. 
+
+![Wiring diagram](/images/wiring_diagram.png)
 
 > [!NOTE]
 > This project is fully done in Wokwi platform. Therefore, there are some issues can arrise when it implement in real world.
@@ -47,7 +46,7 @@ I use Wokwi to build my project. Since this is a big project, you have to use VS
 You can also watch [this video](https://www.youtube.com/watch?v=fUlAPdekVO0) to install the extension correctly.
 
 Also you need to install PlatformIO extension. After install it, you can create a new project using PIO Home page. I named it as '**Medibox**'. Since I use ESP32 Dev kit V1 as my microcontroller, you can choose '**DOIT ESP32 DEVKIT V1**' as your board. Choose framework as '**Arduino**'.
-
+![Create a new project on PlatformIO](/images/create_new_project.png)
 ### Code files
 
 In my code directory, There are several folders in it.
@@ -78,6 +77,6 @@ For web based dashboard I used NodeRED dashboard. It is a very simple platform t
 
 
 ## Message from the developer
-I really welcome everyone who are like to develop, improve and correct bugs. You can freely fork this project and add anything you want. But **please secure the credits of author**.
+I really welcome everyone who are like to develop, improve and correct bugs. You can freely fork this project and add anything you want. But **please secure the credits of author**:grin:.
 
-Thank you :grin:
+Thank you :heart:
