@@ -67,14 +67,20 @@ void callback(char *topic, byte *payload, unsigned int length)
   if (strcmp(topic, "/Medibox/timezone") == 0)
   {
     local_timezone zone_fromWeb;
+    zone_fromWeb.sign = message[0];
+    zone_fromWeb.hours = message.substring(1, 3).toInt();
+    zone_fromWeb.minutes = message.substring(4, 6).toInt();
+
     Serial.print("timezone: ");
-    zone_fromWeb = message.toFloat();
     Serial.print(zone_fromWeb.sign);
+    Serial.print(zone_fromWeb.hours);
+    Serial.print(":");
+    Serial.println(zone_fromWeb.minutes);
 
     long UTC_OFFSET1 = (zone_fromWeb.hours * 60 + zone_fromWeb.minutes) * 60;
     if (zone_fromWeb.sign == '-')
     {
-      UTC_OFFSET1 = -UTC_OFFSET;
+      UTC_OFFSET1 = -UTC_OFFSET1;
     }
     configTime(UTC_OFFSET1, UTC_OFFSET_DST, NTP_SERVER);
   }
@@ -82,53 +88,53 @@ void callback(char *topic, byte *payload, unsigned int length)
   if (strcmp(topic, "/Medibox/alarm1") == 0)
   {
     Serial.print("alarm 1: ");
-    timeArray[0] = message.toFloat();
-    Serial.println(r);
-    EEPROM.write(0, timeArray[0].hours);
-    EEPROM.write(1, timeArray[0].minutes);
+    timeArray[0].hours = message.substring(0, 2).toInt();
+    timeArray[0].minutes = message.substring(4, 6).toInt();
+    Serial.print(timeArray[0].hours);
+    Serial.print(":");
+    Serial.print(timeArray[0].minutes);
+    EEPROM.write(0, timeArray[1].hours);
+    EEPROM.write(1, timeArray[1].minutes);
     set_alarms[0] = true;
   }
 
   if (strcmp(topic, "/Medibox/alarm2") == 0)
   {
     Serial.print("alarm 2: ");
-    timeArray[0] = message.toFloat();
-    Serial.println(r);
-    EEPROM.write(1, timeArray[1].hours);
-    EEPROM.write(2, timeArray[1].minutes);
+    timeArray[1].hours = message.substring(0, 2).toInt();
+    timeArray[1].minutes = message.substring(4, 6).toInt();
+    Serial.print(timeArray[1].hours);
+    Serial.print(":");
+    Serial.print(timeArray[1].minutes);
+    EEPROM.write(2, timeArray[1].hours);
+    EEPROM.write(3, timeArray[1].minutes);
     set_alarms[1] = true;
   }
 
   if (strcmp(topic, "/Medibox/alarm3") == 0)
   {
     Serial.print("alarm 3: ");
-    timeArray[0] = message.toFloat();
-    Serial.println(r);
-    EEPROM.write(2, timeArray[2].hours);
-    EEPROM.write(3, timeArray[2].minutes);
+    timeArray[2].hours = message.substring(0, 2).toInt();
+    timeArray[2].minutes = message.substring(4, 6).toInt();
+    Serial.print(timeArray[2].hours);
+    Serial.print(":");
+    Serial.print(timeArray[2].minutes);
+    EEPROM.write(4, timeArray[2].hours);
+    EEPROM.write(5, timeArray[2].minutes);
     set_alarms[2] = true;
   }
 
-  if (strcmp(topic, "/Medibox/disable_enable_all_alarm") == 0)
+  if (strcmp(topic, "/Medibox/set_alarms") == 0)
   {
     Serial.print("all alarm: ");
-    r = message.toInt();
-    if (r == 1)
-    {
-      Serial.println(" Enable");
-      for (int j = 0; j < n_alarms; j++)
-      {
-        set_alarms[j] = true;
-      }
-    }
-    else
-    {
-      Serial.println(" Disable");
-      for (int j = 0; j < n_alarms; j++)
-      {
-        set_alarms[j] = false;
-      }
-    }
+    set_alarms[0] = message.substring(1, 2).toInt();
+    set_alarms[1] = message.substring(3, 4).toInt();
+    set_alarms[2] = message.substring(5, 6).toInt();
+    Serial.print(set_alarms[0]);
+    Serial.print(", ");
+    Serial.print(set_alarms[1]);
+    Serial.print(", ");
+    Serial.print(set_alarms[2]);
   }
 }
 
@@ -147,7 +153,7 @@ void reconnect()
       client.subscribe("/Medibox/alarm1");
       client.subscribe("/Medibox/alarm2");
       client.subscribe("/Medibox/alarm3");
-      client.subscribe("/Medibox/disable_enable_all_alarm");
+      client.subscribe("/Medibox/set_alarms");
     }
     else
     {

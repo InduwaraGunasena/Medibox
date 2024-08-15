@@ -1,9 +1,5 @@
 # Medibox
 
-This is a solo project in my forth semester has done for _EN2853: Embedded Systems And Applications_ course module in University of Moratuwa.
-
-## Introduction of my project
-
 When you have any disease you need medicine to recover. Taking medicines on time is essential for recover fast. Today almost all the people are very busy. So they can mistake their doses. So this medibox will help you to do this on time.
 
 Medibox is a device used to remind users to take their medicine on time using an ESP32. This device reminds you every doses with relevent medicine on that dose. Therefore, you will never miss any medicine or dose again.
@@ -12,14 +8,14 @@ Medibox is a device used to remind users to take their medicine on time using an
 
 Now you already know this is a device that reminds paticients to take their medicies on time. To fullfill this I identified several requirements as listed below.
 
-- ###functional requirements
+- ## functional requirements
 
   - **Device must remind the relevent doses on time:** The device will remind doses by using its buzzer and LED.
   - **Device should store the medicines under secure container:** The shaded sliding window is used to prevent the excessive light from entering the medibox. It has a DHT sensor to measure the temperature and humidity of the environment.
 
-- ###non-functional requirements
+- ## non-functional requirements
   - **The time should be accurately represent the current time:** To do this, the device update the time by usin NTP server. Also the user can also setup their timezone.
-  - **The device should last long time:** The device uses several power saving mechanisms to save the power.
+  - **The device should last long time:** The device uses several power saving mechanisms to save the power. The display will go to sleep after 1 minute from the last user button press. The microcontroller always go to deep sleep mode if there is no user interaction.
   - **User friendly device:** It has a simple design and a user interface in both physical and web based interface to interact with the device. Users can change and visualize everything using both interfaces.
 
 ## Components which I use
@@ -34,6 +30,9 @@ Now you already know this is a device that reminds paticients to take their medi
 8. SG90 servo motor
 
 ## Wiring diagram
+You can use **diagram.json** file to build the circuit in the Wokwi platform. 
+
+![Wiring diagram](/images/wiring_diagram.png)
 
 > [!NOTE]
 > This project is fully done in Wokwi platform. Therefore, there are some issues can arrise when it implement in real world.
@@ -42,12 +41,12 @@ Now you already know this is a device that reminds paticients to take their medi
 
 ### Installing Wokvi for VS code and build your workspace
 
-I use Wokwi to build my project. Since this is a big project, you have to use VS code extension for the wokwi. To install, please refer [this page](https://docs.wokwi.com/vscode/getting-started) for more information.
+I use Wokwi to build my project. Since this is a big project, you have to use VS code extension for the Wokwi. To install, please refer [this page](https://docs.wokwi.com/vscode/getting-started) for more information.
 
 You can also watch [this video](https://www.youtube.com/watch?v=fUlAPdekVO0) to install the extension correctly.
 
 Also you need to install PlatformIO extension. After install it, you can create a new project using PIO Home page. I named it as '**Medibox**'. Since I use ESP32 Dev kit V1 as my microcontroller, you can choose '**DOIT ESP32 DEVKIT V1**' as your board. Choose framework as '**Arduino**'.
-
+![Create a new project on PlatformIO](/images/create_new_project.png)
 ### Code files
 
 In my code directory, There are several folders in it.
@@ -62,20 +61,22 @@ In my code directory, There are several folders in it.
 To control the shaded sliding window I use this equation to calculate the servo motor angle.
 
 $$
-\theta = \min{ \theta<sub>offset</sub> × D + (180 − \theta<sub>offset</sub>) × I × \gamma, 180}
+\theta = \min\left( \theta_{\text{offset}} \times D + (180 − \theta_{\text{offset}}) \times I \times \gamma , 180 \right)
+$$
+
+
 where,
-∗ \theta is the motor angle
-∗ \theta<sub>offset</sub> is the minimum angle (default value of 30 degrees)
-∗ I is the max intensity of light, ranging from 0 to 1
-∗ \gamma is the controlling factor (default value of 0.75)
-∗ D = 0.5 if right LDR gives max intensity, D = 1.5 if left LDR gives max intensity
+- $\theta$ is the motor angle
+- $\theta$<sub>offset</sub> is the minimum angle (default value of 30 degrees)
+- $I$ is the max intensity of light, ranging from 0 to 1
+- $\gamma$ is the controlling factor (default value of 0.75)
+- D = 0.5 if right LDR gives max intensity, D = 1.5 if left LDR gives max intensity
 
 ### NodeRED Dashboard
 For web based dashboard I used NodeRED dashboard. It is a very simple platform to build an attractive dashboards. All the necessory files to build NodeRED dashboard are in the **Node-RED dashboard** folder. You can import the **flows.json** file into your NodeRED application and change it as you want.
 
 
 ## Message from the developer
-I really welcome everyone who are like to develop, improve and correct bugs. You can freely fork this project and add anything you want. But **please secure the credits of author**.
+I really welcome everyone who are like to develop, improve and correct bugs. You can freely fork this project and add anything you want. But **please secure the credits of author**:grin:.
 
-Thank you :grin:
-$$
+Thank you :heart:

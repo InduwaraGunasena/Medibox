@@ -1,0 +1,2946 @@
+[
+    {
+        "id": "55fab20d0071e82f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "22eb905e2f486e79",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2d59e94c579a650b",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "settings",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "701e50e83fb01815",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1bd60f9eb6d2be33",
+        "type": "ui_group",
+        "name": "Light Intensity",
+        "tab": "85e1b9e716b95bf2",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c8d5ca8b83475e82",
+        "type": "ui_group",
+        "name": "Sliding Window",
+        "tab": "2d59e94c579a650b",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "85e1b9e716b95bf2",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fefffe5f3d8a45bb",
+        "type": "ui_group",
+        "name": "Time",
+        "tab": "85e1b9e716b95bf2",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c1be8f0201f0e78f",
+        "type": "ui_group",
+        "name": "Next alarm",
+        "tab": "85e1b9e716b95bf2",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f42ceb3f63c05bd",
+        "type": "ui_group",
+        "name": "Set alarms",
+        "tab": "4eb9dff0de5be54f",
+        "order": 2,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4eb9dff0de5be54f",
+        "type": "ui_tab",
+        "name": "Alarms",
+        "icon": "access_alarms",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1ef6d99a62ba48b0",
+        "type": "ui_group",
+        "name": "Time-zone",
+        "tab": "2d59e94c579a650b",
+        "order": 2,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "803cd303a7af9a61",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "2f42ceb3f63c05bd",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ef8fec76f4d8087c",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "2f42ceb3f63c05bd",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f2d0debf8a8c8822",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "2f42ceb3f63c05bd",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "3139788f1c28d30e",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "2f42ceb3f63c05bd",
+        "order": 13,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "dda868d49eccdc93",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "c8d5ca8b83475e82",
+        "order": 1,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "59f3e8a75a912b2e",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "c8d5ca8b83475e82",
+        "order": 3,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "feab2d092dd46bc0",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "1ef6d99a62ba48b0",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "267f454b0625cfa8",
+        "type": "ui_spacer",
+        "z": "55fab20d0071e82f",
+        "name": "spacer",
+        "group": "1bd60f9eb6d2be33",
+        "order": 3,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "b7ba2c17a8815ed8",
+        "type": "mqtt in",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/leftLDR",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "22eb905e2f486e79",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "e107155531bdfb85"
+            ]
+        ]
+    },
+    {
+        "id": "f3cfd57e71ef3ad8",
+        "type": "mqtt in",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/rightLDR",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "22eb905e2f486e79",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "e107155531bdfb85"
+            ]
+        ]
+    },
+    {
+        "id": "5fe6559b2d4c4f0d",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 1",
+        "func": "var leftValue = msg.payload[\"/Medibox/leftLDR\"];\nvar rightValue = msg.payload[\"/Medibox/rightLDR\"];\n\n// Compare the values to find the maximum\nvar maxValue;\nvar maxSensor;\n\nif (leftValue > rightValue) {\n    maxValue = leftValue;\n    maxSensor = \"LEFT\";\n} else {\n    maxValue = rightValue;\n    maxSensor = \"RIGHT\";\n}\n\n// Create a new message object to send the result\nvar maxMessage = {\n    payload: {\n        maxValue: maxValue,\n        maxSensor: maxSensor\n    }\n};\n\n// Return the message with the maximum value and the corresponding sensor\nreturn maxMessage;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "ea3c1919e93fcaaa",
+                "3a2890e3f3bc85f2",
+                "af9f4deda2e86c6c"
+            ]
+        ]
+    },
+    {
+        "id": "ea3c1919e93fcaaa",
+        "type": "ui_gauge",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "group": "1bd60f9eb6d2be33",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Max Light",
+        "label": "Intensity",
+        "format": "{{payload.maxValue}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "0.35",
+        "seg2": "0.65",
+        "diff": false,
+        "className": "",
+        "x": 820,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2ca5f40f299e2927",
+        "type": "ui_chart",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "group": "1bd60f9eb6d2be33",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Maximum Light Intensity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff8214",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a2890e3f3bc85f2",
+        "type": "ui_text",
+        "z": "55fab20d0071e82f",
+        "group": "1bd60f9eb6d2be33",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sensor",
+        "format": "{{msg.payload.maxSensor}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Courier,monospace",
+        "fontSize": "25",
+        "color": "#e90c0c",
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e107155531bdfb85",
+        "type": "join",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "5fe6559b2d4c4f0d"
+            ]
+        ]
+    },
+    {
+        "id": "af9f4deda2e86c6c",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 2",
+        "func": "var maxValue = msg.payload.maxValue;\n\nvar newMsg = { payload: maxValue };\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "2ca5f40f299e2927"
+            ]
+        ]
+    },
+    {
+        "id": "da03aec71649f444",
+        "type": "ui_slider",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "Minimum Angle",
+        "tooltip": "",
+        "group": "c8d5ca8b83475e82",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "offset",
+        "topicType": "msg",
+        "min": 0,
+        "max": "120",
+        "step": 1,
+        "className": "",
+        "x": 800,
+        "y": 360,
+        "wires": [
+            [
+                "16602b0852461bdd"
+            ]
+        ]
+    },
+    {
+        "id": "344b626ac715587b",
+        "type": "ui_slider",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "Controlling Factor",
+        "tooltip": "",
+        "group": "c8d5ca8b83475e82",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "control_factor",
+        "topicType": "msg",
+        "min": 0,
+        "max": "1",
+        "step": "0.01",
+        "className": "",
+        "x": 810,
+        "y": 440,
+        "wires": [
+            [
+                "20475d4b680df54a"
+            ]
+        ]
+    },
+    {
+        "id": "3fd420cec6684666",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "Medicine Type",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "c8d5ca8b83475e82",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "A",
+                "value": "A",
+                "type": "str"
+            },
+            {
+                "label": "B",
+                "value": "B",
+                "type": "str"
+            },
+            {
+                "label": "C",
+                "value": "C",
+                "type": "str"
+            },
+            {
+                "label": "Custom",
+                "value": "D",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload",
+        "topicType": "msg",
+        "className": "",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "d614180fa56e11a9"
+            ]
+        ]
+    },
+    {
+        "id": "d614180fa56e11a9",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 4",
+        "func": "var defaults = {\n    A: { offset: 45, control_factor: 0.5 },\n    B: { offset: 60, control_factor: 0.6 },\n    C: { offset: 30, control_factor: 0.7 },\n    Custom: { offset: 0, control_factor: 0 } // You can set custom defaults here\n};\n\n// Get the selected option from the payload\nvar selectedOption = msg.payload;\n\nvar msg = {\n    payload: {\n        offset: defaults[selectedOption].offset,\n        control_factor: defaults[selectedOption].control_factor\n    }\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "8cd0aaa54d71f02b",
+                "619ae9dd3b07311e"
+            ]
+        ]
+    },
+    {
+        "id": "8cd0aaa54d71f02b",
+        "type": "change",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.offset",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 360,
+        "wires": [
+            [
+                "da03aec71649f444"
+            ]
+        ]
+    },
+    {
+        "id": "619ae9dd3b07311e",
+        "type": "change",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.control_factor",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "344b626ac715587b"
+            ]
+        ]
+    },
+    {
+        "id": "16602b0852461bdd",
+        "type": "mqtt out",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/offset",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "22eb905e2f486e79",
+        "x": 1040,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "20475d4b680df54a",
+        "type": "mqtt out",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/control_factor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "22eb905e2f486e79",
+        "x": 1070,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e958014b62caf771",
+        "type": "ui_text",
+        "z": "55fab20d0071e82f",
+        "group": "fefffe5f3d8a45bb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "40",
+        "color": "#05b4ff",
+        "x": 490,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "802bcd7f9cef1717",
+        "type": "ui_text",
+        "z": "55fab20d0071e82f",
+        "group": "c1be8f0201f0e78f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "40",
+        "color": "#3860ff",
+        "x": 490,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "5b94c66deabde1f1",
+        "type": "mqtt in",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/time",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "22eb905e2f486e79",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 70,
+        "y": 540,
+        "wires": [
+            [
+                "ac0bcc72e628310d"
+            ]
+        ]
+    },
+    {
+        "id": "92ba9a26ef9a7c99",
+        "type": "mqtt in",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/next_alarm",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "22eb905e2f486e79",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "1e223540ce403e90"
+            ]
+        ]
+    },
+    {
+        "id": "eada6c4b8b6cab96",
+        "type": "mqtt in",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/alarms",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "22eb905e2f486e79",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 840,
+        "wires": [
+            [
+                "193ede285d7d2f37"
+            ]
+        ]
+    },
+    {
+        "id": "52278ccbffb019ef",
+        "type": "ui_switch",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "2f42ceb3f63c05bd",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "switch1",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 980,
+        "wires": [
+            [
+                "29ea55a851f00ee7",
+                "d89f6d7e102fd2c1"
+            ]
+        ]
+    },
+    {
+        "id": "8d19ad6fb75b7bce",
+        "type": "ui_button",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "group": "2f42ceb3f63c05bd",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Disable all",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "close",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 1100,
+        "wires": [
+            [
+                "3cb7e456b21701a7",
+                "52278ccbffb019ef",
+                "764f884fb4a2ca99"
+            ]
+        ]
+    },
+    {
+        "id": "412219430573423b",
+        "type": "ui_button",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "group": "2f42ceb3f63c05bd",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Enable all",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 1000,
+        "wires": [
+            [
+                "52278ccbffb019ef",
+                "3cb7e456b21701a7",
+                "764f884fb4a2ca99"
+            ]
+        ]
+    },
+    {
+        "id": "4e646459bcda3e3d",
+        "type": "mqtt out",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/alarms",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "22eb905e2f486e79",
+        "x": 980,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "429befdea4471897",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "Alarm 1",
+        "tooltip": "",
+        "place": "- -",
+        "group": "2f42ceb3f63c05bd",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 420,
+        "y": 760,
+        "wires": [
+            [
+                "3c2d0af795ae978a"
+            ]
+        ]
+    },
+    {
+        "id": "29ea55a851f00ee7",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 5",
+        "func": "var msg1, msg2, msg3;\n\nif (msg.payload == true){\n    msg1 = { payload: true };  // Enable Alarm 1\n    msg2 = { payload: true };  // Enable Alarm 2\n    msg3 = { payload: true };  // Enable Alarm 3\n}else{\n    msg1 = { payload: false };  // Enable Alarm 1\n    msg2 = { payload: false };  // Enable Alarm 2\n    msg3 = { payload: false };  // Enable Alarm 3\n}\n\nreturn [msg1, msg2, msg3];\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 840,
+        "wires": [
+            [
+                "4e646459bcda3e3d"
+            ]
+        ]
+    },
+    {
+        "id": "3cb7e456b21701a7",
+        "type": "ui_switch",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "2f42ceb3f63c05bd",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "switch2",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 1040,
+        "wires": [
+            [
+                "29ea55a851f00ee7",
+                "d89f6d7e102fd2c1"
+            ]
+        ]
+    },
+    {
+        "id": "764f884fb4a2ca99",
+        "type": "ui_switch",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "2f42ceb3f63c05bd",
+        "order": 12,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "switch3",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 1100,
+        "wires": [
+            [
+                "29ea55a851f00ee7",
+                "d89f6d7e102fd2c1"
+            ]
+        ]
+    },
+    {
+        "id": "193ede285d7d2f37",
+        "type": "switch",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 250,
+        "y": 840,
+        "wires": [
+            [
+                "429befdea4471897"
+            ],
+            [
+                "5178b5fde119d487"
+            ],
+            [
+                "e9a89c2c528d360f"
+            ]
+        ]
+    },
+    {
+        "id": "5178b5fde119d487",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "Alarm 2",
+        "tooltip": "",
+        "place": "- -",
+        "group": "2f42ceb3f63c05bd",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 420,
+        "y": 820,
+        "wires": [
+            [
+                "14c54704b2ce19fe"
+            ]
+        ]
+    },
+    {
+        "id": "e9a89c2c528d360f",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "Alarm 3",
+        "tooltip": "",
+        "place": "- -",
+        "group": "2f42ceb3f63c05bd",
+        "order": 9,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 420,
+        "y": 880,
+        "wires": [
+            [
+                "158a29962c4cbe44"
+            ]
+        ]
+    },
+    {
+        "id": "3c2d0af795ae978a",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": ":",
+        "tooltip": "",
+        "place": "- -",
+        "group": "2f42ceb3f63c05bd",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            },
+            {
+                "label": "13",
+                "value": 13,
+                "type": "num"
+            },
+            {
+                "label": "14",
+                "value": 14,
+                "type": "num"
+            },
+            {
+                "label": "15",
+                "value": 15,
+                "type": "num"
+            },
+            {
+                "label": "16",
+                "value": 16,
+                "type": "num"
+            },
+            {
+                "label": "17",
+                "value": 17,
+                "type": "num"
+            },
+            {
+                "label": "18",
+                "value": 18,
+                "type": "num"
+            },
+            {
+                "label": "19",
+                "value": 19,
+                "type": "num"
+            },
+            {
+                "label": "20",
+                "value": 20,
+                "type": "num"
+            },
+            {
+                "label": "21",
+                "value": 21,
+                "type": "num"
+            },
+            {
+                "label": "22",
+                "value": 22,
+                "type": "num"
+            },
+            {
+                "label": "23",
+                "value": 23,
+                "type": "num"
+            },
+            {
+                "label": "24",
+                "value": 24,
+                "type": "num"
+            },
+            {
+                "label": "25",
+                "value": 25,
+                "type": "num"
+            },
+            {
+                "label": "26",
+                "value": 26,
+                "type": "num"
+            },
+            {
+                "label": "27",
+                "value": 27,
+                "type": "num"
+            },
+            {
+                "label": "28",
+                "value": 28,
+                "type": "num"
+            },
+            {
+                "label": "29",
+                "value": 29,
+                "type": "num"
+            },
+            {
+                "label": "30",
+                "value": 30,
+                "type": "num"
+            },
+            {
+                "label": "31",
+                "value": 31,
+                "type": "num"
+            },
+            {
+                "label": "32",
+                "value": 32,
+                "type": "num"
+            },
+            {
+                "label": "33",
+                "value": 33,
+                "type": "num"
+            },
+            {
+                "label": "34",
+                "value": 34,
+                "type": "num"
+            },
+            {
+                "label": "35",
+                "value": 35,
+                "type": "num"
+            },
+            {
+                "label": "36",
+                "value": 36,
+                "type": "num"
+            },
+            {
+                "label": "37",
+                "value": 37,
+                "type": "num"
+            },
+            {
+                "label": "38",
+                "value": 38,
+                "type": "num"
+            },
+            {
+                "label": "39",
+                "value": 39,
+                "type": "num"
+            },
+            {
+                "label": "40",
+                "value": 40,
+                "type": "num"
+            },
+            {
+                "label": "41",
+                "value": 41,
+                "type": "num"
+            },
+            {
+                "label": "42",
+                "value": 42,
+                "type": "num"
+            },
+            {
+                "label": "43",
+                "value": 43,
+                "type": "num"
+            },
+            {
+                "label": "44",
+                "value": 44,
+                "type": "num"
+            },
+            {
+                "label": "45",
+                "value": 45,
+                "type": "num"
+            },
+            {
+                "label": "46",
+                "value": 46,
+                "type": "num"
+            },
+            {
+                "label": "47",
+                "value": 47,
+                "type": "num"
+            },
+            {
+                "label": "48",
+                "value": 48,
+                "type": "num"
+            },
+            {
+                "label": "49",
+                "value": 49,
+                "type": "num"
+            },
+            {
+                "label": "50",
+                "value": 50,
+                "type": "num"
+            },
+            {
+                "label": "51",
+                "value": 51,
+                "type": "num"
+            },
+            {
+                "label": "52",
+                "value": 52,
+                "type": "num"
+            },
+            {
+                "label": "53",
+                "value": 53,
+                "type": "num"
+            },
+            {
+                "label": "54",
+                "value": 54,
+                "type": "num"
+            },
+            {
+                "label": "55",
+                "value": 55,
+                "type": "num"
+            },
+            {
+                "label": "56",
+                "value": 56,
+                "type": "num"
+            },
+            {
+                "label": "57",
+                "value": 57,
+                "type": "num"
+            },
+            {
+                "label": "58",
+                "value": 58,
+                "type": "num"
+            },
+            {
+                "label": "59",
+                "value": 59,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 760,
+        "wires": [
+            [
+                "29ea55a851f00ee7"
+            ]
+        ]
+    },
+    {
+        "id": "14c54704b2ce19fe",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": ":",
+        "tooltip": "",
+        "place": "- -",
+        "group": "2f42ceb3f63c05bd",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            },
+            {
+                "label": "13",
+                "value": 13,
+                "type": "num"
+            },
+            {
+                "label": "14",
+                "value": 14,
+                "type": "num"
+            },
+            {
+                "label": "15",
+                "value": 15,
+                "type": "num"
+            },
+            {
+                "label": "16",
+                "value": 16,
+                "type": "num"
+            },
+            {
+                "label": "17",
+                "value": 17,
+                "type": "num"
+            },
+            {
+                "label": "18",
+                "value": 18,
+                "type": "num"
+            },
+            {
+                "label": "19",
+                "value": 19,
+                "type": "num"
+            },
+            {
+                "label": "20",
+                "value": 20,
+                "type": "num"
+            },
+            {
+                "label": "21",
+                "value": 21,
+                "type": "num"
+            },
+            {
+                "label": "22",
+                "value": 22,
+                "type": "num"
+            },
+            {
+                "label": "23",
+                "value": 23,
+                "type": "num"
+            },
+            {
+                "label": "24",
+                "value": 24,
+                "type": "num"
+            },
+            {
+                "label": "25",
+                "value": 25,
+                "type": "num"
+            },
+            {
+                "label": "26",
+                "value": 26,
+                "type": "num"
+            },
+            {
+                "label": "27",
+                "value": 27,
+                "type": "num"
+            },
+            {
+                "label": "28",
+                "value": 28,
+                "type": "num"
+            },
+            {
+                "label": "29",
+                "value": 29,
+                "type": "num"
+            },
+            {
+                "label": "30",
+                "value": 30,
+                "type": "num"
+            },
+            {
+                "label": "31",
+                "value": 31,
+                "type": "num"
+            },
+            {
+                "label": "32",
+                "value": 32,
+                "type": "num"
+            },
+            {
+                "label": "33",
+                "value": 33,
+                "type": "num"
+            },
+            {
+                "label": "34",
+                "value": 34,
+                "type": "num"
+            },
+            {
+                "label": "35",
+                "value": 35,
+                "type": "num"
+            },
+            {
+                "label": "36",
+                "value": 36,
+                "type": "num"
+            },
+            {
+                "label": "37",
+                "value": 37,
+                "type": "num"
+            },
+            {
+                "label": "38",
+                "value": 38,
+                "type": "num"
+            },
+            {
+                "label": "39",
+                "value": 39,
+                "type": "num"
+            },
+            {
+                "label": "40",
+                "value": 40,
+                "type": "num"
+            },
+            {
+                "label": "41",
+                "value": 41,
+                "type": "num"
+            },
+            {
+                "label": "42",
+                "value": 42,
+                "type": "num"
+            },
+            {
+                "label": "43",
+                "value": 43,
+                "type": "num"
+            },
+            {
+                "label": "44",
+                "value": 44,
+                "type": "num"
+            },
+            {
+                "label": "45",
+                "value": 45,
+                "type": "num"
+            },
+            {
+                "label": "46",
+                "value": 46,
+                "type": "num"
+            },
+            {
+                "label": "47",
+                "value": 47,
+                "type": "num"
+            },
+            {
+                "label": "48",
+                "value": 48,
+                "type": "num"
+            },
+            {
+                "label": "49",
+                "value": 49,
+                "type": "num"
+            },
+            {
+                "label": "50",
+                "value": 50,
+                "type": "num"
+            },
+            {
+                "label": "51",
+                "value": 51,
+                "type": "num"
+            },
+            {
+                "label": "52",
+                "value": 52,
+                "type": "num"
+            },
+            {
+                "label": "53",
+                "value": 53,
+                "type": "num"
+            },
+            {
+                "label": "54",
+                "value": 54,
+                "type": "num"
+            },
+            {
+                "label": "55",
+                "value": 55,
+                "type": "num"
+            },
+            {
+                "label": "56",
+                "value": 56,
+                "type": "num"
+            },
+            {
+                "label": "57",
+                "value": 57,
+                "type": "num"
+            },
+            {
+                "label": "58",
+                "value": 58,
+                "type": "num"
+            },
+            {
+                "label": "59",
+                "value": 59,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 820,
+        "wires": [
+            [
+                "29ea55a851f00ee7"
+            ]
+        ]
+    },
+    {
+        "id": "158a29962c4cbe44",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": ":",
+        "tooltip": "",
+        "place": "- -",
+        "group": "2f42ceb3f63c05bd",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            },
+            {
+                "label": "13",
+                "value": 13,
+                "type": "num"
+            },
+            {
+                "label": "14",
+                "value": 14,
+                "type": "num"
+            },
+            {
+                "label": "15",
+                "value": 15,
+                "type": "num"
+            },
+            {
+                "label": "16",
+                "value": 16,
+                "type": "num"
+            },
+            {
+                "label": "17",
+                "value": 17,
+                "type": "num"
+            },
+            {
+                "label": "18",
+                "value": 18,
+                "type": "num"
+            },
+            {
+                "label": "19",
+                "value": 19,
+                "type": "num"
+            },
+            {
+                "label": "20",
+                "value": 20,
+                "type": "num"
+            },
+            {
+                "label": "21",
+                "value": 21,
+                "type": "num"
+            },
+            {
+                "label": "22",
+                "value": 22,
+                "type": "num"
+            },
+            {
+                "label": "23",
+                "value": 23,
+                "type": "num"
+            },
+            {
+                "label": "24",
+                "value": 24,
+                "type": "num"
+            },
+            {
+                "label": "25",
+                "value": 25,
+                "type": "num"
+            },
+            {
+                "label": "26",
+                "value": 26,
+                "type": "num"
+            },
+            {
+                "label": "27",
+                "value": 27,
+                "type": "num"
+            },
+            {
+                "label": "28",
+                "value": 28,
+                "type": "num"
+            },
+            {
+                "label": "29",
+                "value": 29,
+                "type": "num"
+            },
+            {
+                "label": "30",
+                "value": 30,
+                "type": "num"
+            },
+            {
+                "label": "31",
+                "value": 31,
+                "type": "num"
+            },
+            {
+                "label": "32",
+                "value": 32,
+                "type": "num"
+            },
+            {
+                "label": "33",
+                "value": 33,
+                "type": "num"
+            },
+            {
+                "label": "34",
+                "value": 34,
+                "type": "num"
+            },
+            {
+                "label": "35",
+                "value": 35,
+                "type": "num"
+            },
+            {
+                "label": "36",
+                "value": 36,
+                "type": "num"
+            },
+            {
+                "label": "37",
+                "value": 37,
+                "type": "num"
+            },
+            {
+                "label": "38",
+                "value": 38,
+                "type": "num"
+            },
+            {
+                "label": "39",
+                "value": 39,
+                "type": "num"
+            },
+            {
+                "label": "40",
+                "value": 40,
+                "type": "num"
+            },
+            {
+                "label": "41",
+                "value": 41,
+                "type": "num"
+            },
+            {
+                "label": "42",
+                "value": 42,
+                "type": "num"
+            },
+            {
+                "label": "43",
+                "value": 43,
+                "type": "num"
+            },
+            {
+                "label": "44",
+                "value": 44,
+                "type": "num"
+            },
+            {
+                "label": "45",
+                "value": 45,
+                "type": "num"
+            },
+            {
+                "label": "46",
+                "value": 46,
+                "type": "num"
+            },
+            {
+                "label": "47",
+                "value": 47,
+                "type": "num"
+            },
+            {
+                "label": "48",
+                "value": 48,
+                "type": "num"
+            },
+            {
+                "label": "49",
+                "value": 49,
+                "type": "num"
+            },
+            {
+                "label": "50",
+                "value": 50,
+                "type": "num"
+            },
+            {
+                "label": "51",
+                "value": 51,
+                "type": "num"
+            },
+            {
+                "label": "52",
+                "value": 52,
+                "type": "num"
+            },
+            {
+                "label": "53",
+                "value": 53,
+                "type": "num"
+            },
+            {
+                "label": "54",
+                "value": 54,
+                "type": "num"
+            },
+            {
+                "label": "55",
+                "value": 55,
+                "type": "num"
+            },
+            {
+                "label": "56",
+                "value": 56,
+                "type": "num"
+            },
+            {
+                "label": "57",
+                "value": 57,
+                "type": "num"
+            },
+            {
+                "label": "58",
+                "value": 58,
+                "type": "num"
+            },
+            {
+                "label": "59",
+                "value": 59,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 880,
+        "wires": [
+            [
+                "29ea55a851f00ee7"
+            ]
+        ]
+    },
+    {
+        "id": "5c2c4e093091dc68",
+        "type": "mqtt out",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/timezone",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "22eb905e2f486e79",
+        "x": 650,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "b2279cb06ec52411",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "00",
+        "group": "1ef6d99a62ba48b0",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "hours",
+        "topicType": "msg",
+        "className": "",
+        "x": 220,
+        "y": 1280,
+        "wires": [
+            [
+                "0390cc256301f30d"
+            ]
+        ]
+    },
+    {
+        "id": "2336cc0b09036d1a",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": ":",
+        "tooltip": "",
+        "place": "00",
+        "group": "1ef6d99a62ba48b0",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "00",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "01",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "02",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "03",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "04",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "05",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "06",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "07",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "08",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "09",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "12",
+                "value": 12,
+                "type": "num"
+            },
+            {
+                "label": "13",
+                "value": 13,
+                "type": "num"
+            },
+            {
+                "label": "14",
+                "value": 14,
+                "type": "num"
+            },
+            {
+                "label": "15",
+                "value": 15,
+                "type": "num"
+            },
+            {
+                "label": "16",
+                "value": 16,
+                "type": "num"
+            },
+            {
+                "label": "17",
+                "value": 17,
+                "type": "num"
+            },
+            {
+                "label": "18",
+                "value": 18,
+                "type": "num"
+            },
+            {
+                "label": "19",
+                "value": 19,
+                "type": "num"
+            },
+            {
+                "label": "20",
+                "value": 20,
+                "type": "num"
+            },
+            {
+                "label": "21",
+                "value": 21,
+                "type": "num"
+            },
+            {
+                "label": "22",
+                "value": 22,
+                "type": "num"
+            },
+            {
+                "label": "23",
+                "value": 23,
+                "type": "num"
+            },
+            {
+                "label": "24",
+                "value": 24,
+                "type": "num"
+            },
+            {
+                "label": "25",
+                "value": 25,
+                "type": "num"
+            },
+            {
+                "label": "26",
+                "value": 26,
+                "type": "num"
+            },
+            {
+                "label": "27",
+                "value": 27,
+                "type": "num"
+            },
+            {
+                "label": "28",
+                "value": 28,
+                "type": "num"
+            },
+            {
+                "label": "29",
+                "value": 29,
+                "type": "num"
+            },
+            {
+                "label": "30",
+                "value": 30,
+                "type": "num"
+            },
+            {
+                "label": "31",
+                "value": 31,
+                "type": "num"
+            },
+            {
+                "label": "32",
+                "value": 32,
+                "type": "num"
+            },
+            {
+                "label": "33",
+                "value": 33,
+                "type": "num"
+            },
+            {
+                "label": "34",
+                "value": 34,
+                "type": "num"
+            },
+            {
+                "label": "35",
+                "value": 35,
+                "type": "num"
+            },
+            {
+                "label": "36",
+                "value": 36,
+                "type": "num"
+            },
+            {
+                "label": "37",
+                "value": 37,
+                "type": "num"
+            },
+            {
+                "label": "38",
+                "value": 38,
+                "type": "num"
+            },
+            {
+                "label": "39",
+                "value": 39,
+                "type": "num"
+            },
+            {
+                "label": "40",
+                "value": 40,
+                "type": "num"
+            },
+            {
+                "label": "41",
+                "value": 41,
+                "type": "num"
+            },
+            {
+                "label": "42",
+                "value": 42,
+                "type": "num"
+            },
+            {
+                "label": "43",
+                "value": 43,
+                "type": "num"
+            },
+            {
+                "label": "44",
+                "value": 44,
+                "type": "num"
+            },
+            {
+                "label": "45",
+                "value": 45,
+                "type": "num"
+            },
+            {
+                "label": "46",
+                "value": 46,
+                "type": "num"
+            },
+            {
+                "label": "47",
+                "value": 47,
+                "type": "num"
+            },
+            {
+                "label": "48",
+                "value": 48,
+                "type": "num"
+            },
+            {
+                "label": "49",
+                "value": 49,
+                "type": "num"
+            },
+            {
+                "label": "50",
+                "value": 50,
+                "type": "num"
+            },
+            {
+                "label": "51",
+                "value": 51,
+                "type": "num"
+            },
+            {
+                "label": "52",
+                "value": 52,
+                "type": "num"
+            },
+            {
+                "label": "53",
+                "value": 53,
+                "type": "num"
+            },
+            {
+                "label": "54",
+                "value": 54,
+                "type": "num"
+            },
+            {
+                "label": "55",
+                "value": 55,
+                "type": "num"
+            },
+            {
+                "label": "56",
+                "value": 56,
+                "type": "num"
+            },
+            {
+                "label": "57",
+                "value": 57,
+                "type": "num"
+            },
+            {
+                "label": "58",
+                "value": 58,
+                "type": "num"
+            },
+            {
+                "label": "59",
+                "value": 59,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "mins",
+        "topicType": "msg",
+        "className": "",
+        "x": 210,
+        "y": 1340,
+        "wires": [
+            [
+                "0390cc256301f30d"
+            ]
+        ]
+    },
+    {
+        "id": "39c724596c310986",
+        "type": "ui_dropdown",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "label": "UTC",
+        "tooltip": "sign",
+        "place": "sign",
+        "group": "1ef6d99a62ba48b0",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "+",
+                "value": "+",
+                "type": "str"
+            },
+            {
+                "label": "-",
+                "value": "-",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "sign",
+        "topicType": "msg",
+        "className": "",
+        "x": 210,
+        "y": 1220,
+        "wires": [
+            [
+                "0390cc256301f30d"
+            ]
+        ]
+    },
+    {
+        "id": "01f3b0d291ebbe8e",
+        "type": "ui_button",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "group": "1ef6d99a62ba48b0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "set",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "activate",
+        "topicType": "msg",
+        "x": 210,
+        "y": 1420,
+        "wires": [
+            [
+                "0390cc256301f30d"
+            ]
+        ]
+    },
+    {
+        "id": "0390cc256301f30d",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 6",
+        "func": "if (msg.activate === true) {\n    var combinedPayload = {\n        sign: msg.sign,\n        hours: msg.hours,\n        mins: msg.mins\n    };\n    return { payload: combinedPayload };\n} else {\n    return null;  // No message sent if 'activate' is not true\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1280,
+        "wires": [
+            [
+                "5c2c4e093091dc68"
+            ]
+        ]
+    },
+    {
+        "id": "b6183dc607b1ec25",
+        "type": "mqtt out",
+        "z": "55fab20d0071e82f",
+        "name": "",
+        "topic": "/Medibox/set_alarms",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "22eb905e2f486e79",
+        "x": 1020,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "d89f6d7e102fd2c1",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 7",
+        "func": "return [msg.switch1, msg.switch2, msg.switch3];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 1040,
+        "wires": [
+            [
+                "b6183dc607b1ec25"
+            ]
+        ]
+    },
+    {
+        "id": "ac0bcc72e628310d",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 8",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 540,
+        "wires": [
+            [
+                "e958014b62caf771"
+            ]
+        ]
+    },
+    {
+        "id": "1e223540ce403e90",
+        "type": "function",
+        "z": "55fab20d0071e82f",
+        "name": "function 9",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "802bcd7f9cef1717"
+            ]
+        ]
+    }
+]

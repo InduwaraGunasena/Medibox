@@ -16,7 +16,7 @@
 
 // All pinout configurations are listed here.
 #define Left_LDR         34
-#define Right_LDR        35
+#define Right_LDR        26
 #define servo_pin         6 
 #define BUZZER            5
 #define alarm_LED        15
