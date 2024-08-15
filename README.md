@@ -83,7 +83,7 @@ Medibox features several display interfaces on the OLED screen. Users can naviga
 6. Enable/Disable alarms page  
    <img src="/images/enable_disable_alarm_menu.png" alt="Enable/Disable Alarms Page" width="300"/>
 
-To control the shaded sliding window I use this equation to calculate the servo motor angle.
+The following equation is used to calculate the servo motor angle:
 
 $$
 \theta = \min\left( \theta_{\text{offset}} \times D + (180 − \theta_{\text{offset}}) \times I \times \gamma , 180 \right)
@@ -110,6 +110,15 @@ The Node-RED dashboard has three interfaces:
   <img src="/images/set_alarm.png" alt="Set Alarms" width="600"/>
   </p>
 3. Settings
+
+The Medibox includes an adjustable shaded sliding window feature, allowing users to customize the minimum angle and controlling factor for different medicines via the Node-RED dashboard:
+- Slider Controls:
+  - Minimum Angle: Adjustable from 0 to 120 degrees.
+  - Controlling Factor: Adjustable from 0 to 1.
+- Medicine Selection Dropdown:
+  - Predefined settings for common medicines (e.g., Tablet A, B, C).
+  - Custom option for manual adjustments.
+  
   <p align="center">
   <img src="/images/settings.png" alt="Settings" width="600"/>
   </p>
